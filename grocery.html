@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 40%;
+        margin: auto;
+        border: 1px solid black;
+        border-radius: 12px;
+        padding: 25px;
+      }
+
+      input {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+
+      label {
+        text-align: left;
+        padding: 5px 0;
+        display: block;
+      }
+
+      button {
+        margin: auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label for="">Total Income</label>
+      <input type="number" id="income" />
+
+      <label for="">Rent</label>
+      <input type="number" id="rent" />
+
+      <label for="">Groceries</label>
+      <input type="number" id="groceries" />
+
+      <label for="">Utilities</label>
+      <input type="number" id="utilities" />
+
+      <label for="">Transportation</label>
+      <input type="number" id="transportation" />
+
+      <label for="">Leisure</label>
+      <input type="number" id="leisure" />
+    </form>
+    <button type="button" onclick="calculateGroceries()">Submit</button>
+
+    <div>
+      <p>Total Income: <span id="CalcIncome"> </span></p>
+      <p>Total Expenses <span id="CalcExpenses"> </span></p>
+      <p>Remaing Balance <span id="CalcBalance"> </span></p>
+    </div>
+
+    <script>
+      function calculateGroceries() {
+        // collect User Inputs
+        let totalIncome = parseFloat(document.getElementById("income").value);
+        let rent = Number(document.getElementById("rent").value);
+        let groceries = Number(document.getElementById("groceries").value);
+        let utilities = Number(document.getElementById("utilities").value);
+        let transportation = Number(
+          document.getElementById("transportation").value
+        );
+        let leisure = Number(document.getElementById("leisure").value);
+
+        let totalExpenses =
+          rent + groceries + utilities + transportation + leisure;
+        let remaningBalance = totalIncome - totalExpenses;
+
+        document.getElementById("CalcIncome").textContent = totalIncome;
+        document.getElementById("CalcExpenses").textContent = totalExpenses;
+        document.getElementById("CalcBalance").textContent = remaningBalance;
+      }
+
+      //   document.getElementById("form").addEventListener("submit", function (e) {
+      //     e.preventDefault();
+
+      //     // FUNCTION ACTION HERE
+
+      //   });
+    </script>
+  </body>
+</html>
