@@ -106,7 +106,6 @@ console.log("I am " + agss + " years old");
 console.log(`I am ${agss} years old`);
 
 document.getElementById("header").innerHTML = `<b> ${agss} </b>`;
-
 document.getElementById("btn").addEventListener("click", function () {
   alert("I am Here");
 });

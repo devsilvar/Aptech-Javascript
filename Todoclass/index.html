@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        width: 30%;
+        margin: 10vh auto;
+        padding: 15px;
+      }
+
+      div {
+        margin: 9px 2%;
+      }
+
+      table {
+        width: 60%;
+        margin: auto;
+      }
+      th,
+      td {
+        padding: 5px 10px;
+      }
+      input {
+        border-radius: 5px;
+        width: 90%;
+        margin: auto;
+        padding: 9px 5%;
+        border: 1px solid black;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .btn {
+        text-align: center;
+      }
+
+      button {
+        margin: auto;
+      }
+
+      #updateTask {
+        display: none;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <div>
+        <label for="">Add your Task</label>
+        <input type="text" id="task" placeholder="Enter A Task" />
+      </div>
+
+      <div>
+        <label for="">Add the Time</label>
+        <input type="time" name="" id="time" placeholder="Enter the Time" />
+      </div>
+
+      <div>
+        <label for="">Add the Personell</label>
+        <input
+          type="text"
+          name=""
+          id="personell"
+          placeholder="Who Will do The Task"
+        />
+      </div>
+      <div class="btn">
+        <button onclick="categorizeInput()" id="submitTask">Add Task</button>
+      </div>
+    </fieldset>
+
+    <table border="1">
+      <tr>
+        <th>Task</th>
+        <th>Personell</th>
+        <th>Time</th>
+      </tr>
+      <tbody id="table-body">
+        
+      </tbody>
+    </table>
+
+    <script src="app.js"></script>
+  </body>
+</html>
